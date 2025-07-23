@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:intern_restaurant/core/routes/app_routes.dart';
+import 'package:intern_restaurant/core/routes/routes_strings.dart';
 import 'package:intern_restaurant/firebase_options.dart';
 
 void main() async {
@@ -13,6 +15,11 @@ class RestaurantApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Restaurant App', home: Placeholder());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: generateRoutes,
+      title: 'Restaurant App',
+      initialRoute: RoutesStrings.login,
+    );
   }
 }
