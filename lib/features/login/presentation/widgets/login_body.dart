@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:intern_restaurant/core/constant/app_colors.dart';
 import 'package:intern_restaurant/core/constant/app_strings.dart';
 import 'package:intern_restaurant/core/constant/app_text_styles.dart';
 import 'package:intern_restaurant/core/constant/assets.dart';
@@ -26,7 +27,12 @@ class LoginViewBody extends StatelessWidget {
 
             SvgPicture.asset(ImageAssets.imagesSvgAuthenticationScreenImage),
             verticalSpace(20),
-            Text(AppStrings.login, style: AppTextStyle.interBlack16),
+            Text(
+              AppStrings.login,
+              style: AppTextStyle.interBlackBold24.copyWith(
+                color: AppColors.black,
+              ),
+            ),
             verticalSpace(32),
             BlocProvider(
               create: (context) => LoginCubit(
