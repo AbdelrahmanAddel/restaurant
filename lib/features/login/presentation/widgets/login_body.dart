@@ -18,26 +18,25 @@ class LoginViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height,
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset(ImageAssets.imagesSvgAuthenticationScreenImage),
-              verticalSpace(20),
-              Text(AppStrings.login, style: AppTextStyle.interBlack16),
-              verticalSpace(32),
-              BlocProvider(
-                create: (context) => LoginCubit(
-                  LoginWithEmailAndPassUsecase(
-                    LoginRepositoryImpl(LoginRemoteDatasource()),
-                  ),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            verticalSpace(150),
+
+            SvgPicture.asset(ImageAssets.imagesSvgAuthenticationScreenImage),
+            verticalSpace(20),
+            Text(AppStrings.login, style: AppTextStyle.interBlack16),
+            verticalSpace(32),
+            BlocProvider(
+              create: (context) => LoginCubit(
+                LoginWithEmailAndPassUsecase(
+                  LoginRepositoryImpl(LoginRemoteDatasource()),
                 ),
-                child: LoginTextFormFieldsAndButton(),
               ),
-            ],
-          ),
+              child: LoginTextFormFieldsAndButton(),
+            ),
+          ],
         ),
       ),
     );

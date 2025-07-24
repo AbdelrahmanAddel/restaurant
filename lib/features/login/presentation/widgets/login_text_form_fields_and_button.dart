@@ -3,8 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intern_restaurant/core/common/functions/text_form_fields_validator.dart';
 import 'package:intern_restaurant/core/common/widget/custom_app_button.dart';
 import 'package:intern_restaurant/core/common/widget/custom_text_form_field.dart';
+import 'package:intern_restaurant/core/constant/app_colors.dart';
 import 'package:intern_restaurant/core/constant/app_strings.dart';
+import 'package:intern_restaurant/core/helpers/navigation_extension.dart';
 import 'package:intern_restaurant/core/helpers/spacer.dart';
+import 'package:intern_restaurant/core/routes/routes_strings.dart';
 import 'package:intern_restaurant/features/login/data/models/login_with_email_and_password_model.dart';
 import 'package:intern_restaurant/features/login/presentation/cubit/login_cubit.dart';
 import 'package:intern_restaurant/features/login/presentation/widgets/login_bloc_listener.dart';
@@ -63,6 +66,15 @@ class LoginTextFormFieldsAndButton extends StatelessWidget {
             },
           ),
           verticalSpace(16),
+          CustomAppButton(
+            title: AppStrings.createAccount,
+
+            color: AppColors.whiteColor,
+            onTap: () {
+              context.push(RoutesStrings.register);
+            },
+            textColor: AppColors.greenColor,
+          ),
           LoginBlocListener(),
         ],
       ),
