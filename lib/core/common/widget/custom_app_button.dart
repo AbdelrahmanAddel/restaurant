@@ -32,7 +32,7 @@ class CustomAppButton extends StatelessWidget {
             title,
             style: AppTextStyle.interBlackBold24.copyWith(
               fontSize: 15.sp,
-              color: textColor ?? AppColors.whiteColor,
+              color: textColor ?? AppColors.whiteGreenColor,
             ),
           ),
         ),

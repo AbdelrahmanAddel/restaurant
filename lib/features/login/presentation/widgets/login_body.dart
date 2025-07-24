@@ -6,10 +6,7 @@ import 'package:intern_restaurant/core/constant/app_strings.dart';
 import 'package:intern_restaurant/core/constant/app_text_styles.dart';
 import 'package:intern_restaurant/core/constant/assets.dart';
 import 'package:intern_restaurant/core/helpers/spacer.dart';
-
-import 'package:intern_restaurant/features/login/data/datasources/login_remote_datasource.dart';
-import 'package:intern_restaurant/features/login/data/repositories/login_repository_impl.dart';
-import 'package:intern_restaurant/features/login/domain/usecases/login_with_email_and_pass_usecase.dart';
+import 'package:intern_restaurant/di/app_dependecny_injection.dart';
 import 'package:intern_restaurant/features/login/presentation/cubit/login_cubit.dart';
 import 'package:intern_restaurant/features/login/presentation/widgets/login_text_form_fields_and_button.dart';
 
@@ -35,11 +32,7 @@ class LoginViewBody extends StatelessWidget {
             ),
             verticalSpace(32),
             BlocProvider(
-              create: (context) => LoginCubit(
-                LoginWithEmailAndPassUsecase(
-                  LoginRepositoryImpl(LoginRemoteDatasource()),
-                ),
-              ),
+              create: (context) => getIt<LoginCubit>(),
               child: LoginTextFormFieldsAndButton(),
             ),
           ],

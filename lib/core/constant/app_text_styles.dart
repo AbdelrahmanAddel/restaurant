@@ -16,7 +16,7 @@ abstract class AppTextStyle {
     fontFamily: 'Inter',
   );
   static TextStyle interWhiteBold14 = TextStyle(
-    color: AppColors.whiteColor,
+    color: AppColors.whiteGreenColor,
     fontSize: 14.sp,
     fontWeight: FontWeight.w900,
     fontFamily: 'Inter',

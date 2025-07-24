@@ -29,7 +29,7 @@ class LoginBlocListener extends StatelessWidget {
           ).showSnackBar(SnackBar(content: Text(state.error)));
         } else if (state is LoginSuccessState) {
           context.pop();
-          context.pushReplacement(RoutesStrings.home);
+          context.pushReplacement(RoutesStrings.menu);
         } else {
           showDialog(
             context: context,
