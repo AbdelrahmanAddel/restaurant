@@ -30,7 +30,10 @@ class CustomAppButton extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: AppTextStyle.interWhiteBold14.copyWith(color: textColor),
+            style: AppTextStyle.interBlackBold24.copyWith(
+              fontSize: 15.sp,
+              color: textColor ?? AppColors.whiteColor,
+            ),
           ),
         ),
       ),
