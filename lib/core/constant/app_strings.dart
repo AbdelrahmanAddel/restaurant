@@ -9,4 +9,6 @@ abstract class AppStrings {
   static const and = 'and';
   static const createAccount = 'Create Account';
   static const login = 'Login';
+  static const enterEmail = 'Enter Email';
+  static const enterPassword = 'Enter Password';
 }
