@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_single_quotes
-class R {
-  R._();
+class ImageAssets {
+  ImageAssets._();
   
   /// Assets for imagesSvgAuthenticationScreenImage
   /// assets/images/svg/authentication_screen_image.svg
