@@ -11,4 +11,5 @@ abstract class AppStrings {
   static const login = 'Login';
   static const enterEmail = 'Enter Email';
   static const enterPassword = 'Enter Password';
+  static const menu = 'Menu';
 }

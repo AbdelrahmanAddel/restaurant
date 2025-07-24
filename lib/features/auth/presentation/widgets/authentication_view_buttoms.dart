@@ -21,7 +21,7 @@ class AuthenticationViewButtons extends StatelessWidget {
         CustomAppButton(
           onTap: () => context.push(RoutesStrings.login),
           title: AppStrings.login,
-          color: AppColors.whiteColor,
+          color: AppColors.whiteGreenColor,
           textColor: AppColors.emeraldGreenColor,
         ),
       ],

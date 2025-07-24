@@ -69,7 +69,7 @@ class LoginTextFormFieldsAndButton extends StatelessWidget {
           CustomAppButton(
             title: AppStrings.createAccount,
 
-            color: AppColors.whiteColor,
+            color: AppColors.whiteGreenColor,
             onTap: () {
               context.push(RoutesStrings.register);
             },
