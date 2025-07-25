@@ -15,4 +15,26 @@ class MenuRepositoryImpl extends MenuRepository {
       return Left(error.message ?? 'Something went wrong');
     }
   }
+
+  @override
+  Future<Either<String, bool>> addOrRemoveItemFromCard({
+    required MenuModel item,
+  }) async {
+    try {
+      return Right(
+        await _menuRemoteDataSource.addOrRemoveItemFromCard(item: item),
+      );
+    } on FirebaseException catch (error) {
+      return Left(error.message ?? 'Something went wrong');
+    }
+  }
+
+  @override
+  Future<Either<String, List<MenuModel>>> getCard() async {
+    try {
+      return Right(await _menuRemoteDataSource.getCard());
+    } on FirebaseException catch (error) {
+      return Left(error.message ?? 'Something went wrong');
+    }
+  }
 }

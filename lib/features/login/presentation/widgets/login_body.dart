@@ -6,7 +6,7 @@ import 'package:intern_restaurant/core/constant/app_strings.dart';
 import 'package:intern_restaurant/core/constant/app_text_styles.dart';
 import 'package:intern_restaurant/core/constant/assets.dart';
 import 'package:intern_restaurant/core/helpers/spacer.dart';
-import 'package:intern_restaurant/di/app_dependecny_injection.dart';
+import 'package:intern_restaurant/di/app_dependency_injection.dart';
 import 'package:intern_restaurant/features/login/presentation/cubit/login_cubit.dart';
 import 'package:intern_restaurant/features/login/presentation/widgets/login_text_form_fields_and_button.dart';
 

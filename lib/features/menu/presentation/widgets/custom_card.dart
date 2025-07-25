@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intern_restaurant/features/menu/data/models/menu_model.dart';
-import 'package:intern_restaurant/features/menu/presentation/widgets/menu_card_content.dart';
+import 'package:intern_restaurant/features/menu/presentation/widgets/card_content.dart';
 
-class CustomMenuCard extends StatelessWidget {
-  const CustomMenuCard({super.key, required this.menu});
+class CustomCard extends StatelessWidget {
+  const CustomCard({
+    super.key,
+    required this.menu,
+    required this.isAddedToCard,
+  });
   final MenuModel menu;
+  final bool isAddedToCard;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +28,7 @@ class CustomMenuCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
       ),
-      child: MenuCardContent(menu: menu),
+      child: CardContent(menu: menu, isAddedToCard: isAddedToCard),
     );
   }
 }

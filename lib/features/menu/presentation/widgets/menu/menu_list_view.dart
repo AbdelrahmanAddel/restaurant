@@ -21,9 +21,11 @@ class MenuListView extends StatelessWidget {
           case GetMenuLoading():
             return getMenuLoading();
           case GetMenuSuccess():
-            return getMenuSuccess(menu: state.menu);
+            return GetMenuSuccessState(menu: state.menu);
           case GetMenuFailure():
             return Center(child: Text(state.errorMessage));
+          default:
+            return const SizedBox.shrink();
         }
       },
     );
