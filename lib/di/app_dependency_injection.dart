@@ -7,6 +7,8 @@ import 'package:intern_restaurant/features/login/presentation/cubit/login_cubit.
 import 'package:intern_restaurant/features/menu/data/datasources/menu_remote_data_source.dart';
 import 'package:intern_restaurant/features/menu/data/repositories/menu_repository_impl.dart';
 import 'package:intern_restaurant/features/menu/domain/repositories/menu_repository.dart';
+import 'package:intern_restaurant/features/menu/domain/usecases/add_or_remove_item_form_card_usecase.dart';
+import 'package:intern_restaurant/features/menu/domain/usecases/get_card_usecase.dart';
 import 'package:intern_restaurant/features/menu/domain/usecases/get_menu_usecase.dart';
 import 'package:intern_restaurant/features/menu/presentation/cubit/menu_cubit.dart';
 
@@ -15,6 +17,7 @@ final getIt = GetIt.instance;
 Future<void> dependencyInjectionInit() async {
   _login();
   _menu();
+  _card();
 }
 
 void _login() {
@@ -32,5 +35,11 @@ void _menu() {
     () => MenuRepositoryImpl(getIt()),
   );
   getIt.registerLazySingleton(() => GetMenuUsecase(getIt()));
-  getIt.registerLazySingleton(() => MenuCubit(getIt()));
+
+  getIt.registerLazySingleton(() => MenuCubit(getIt(), getIt(), getIt()));
+}
+
+void _card() {
+  getIt.registerLazySingleton(() => GetCardUsecase(getIt()));
+  getIt.registerLazySingleton(() => AddOrRemoveItemFormCardUsecase(getIt()));
 }

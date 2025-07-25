@@ -5,5 +5,6 @@ abstract class FirebaseStrings {
   static const image = 'image';
   static const price = 'price';
   static const id = 'id';
-  static const isFavorite = 'isFavorite';
+  static const isAddedToCard = 'isAddedToCard';
+  static const card = 'card';
 }

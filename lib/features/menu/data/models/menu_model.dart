@@ -1,19 +1,17 @@
 import 'package:intern_restaurant/core/constant/firebase_strings.dart';
 
 class MenuModel {
-  final String ? name;
-  final String ? description;
-  final String  ? image;
-  final double ? price;
-  final int ? id;
-  final bool ? isFavorite;
+  final String? name;
+  final String? description;
+  final String? image;
+  final double? price;
+  final int? id;
   MenuModel({
     required this.name,
     required this.description,
     required this.image,
     required this.price,
     required this.id,
-    this.isFavorite = false,
   });
   factory MenuModel.fromJson(Map<String, dynamic> json) {
     return MenuModel(
@@ -22,17 +20,16 @@ class MenuModel {
       image: json[FirebaseStrings.image],
       price: json[FirebaseStrings.price],
       id: json[FirebaseStrings.id],
-      isFavorite: json[FirebaseStrings.isFavorite],
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
-      'name': name,
-      'description': description,
-      'image': image,
-      'price': price,
-      'isFavorite': isFavorite,
+      FirebaseStrings.name: name,
+      FirebaseStrings.description: description,
+      FirebaseStrings.image: image,
+      FirebaseStrings.price: price,
+      FirebaseStrings.id: id,
     };
   }
 }
