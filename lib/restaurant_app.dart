@@ -15,7 +15,7 @@ class RestaurantApp extends StatelessWidget {
       builder: (_, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         onGenerateRoute: generateRoutes,
-        initialRoute: RoutesStrings.login,
+        initialRoute: RoutesStrings.authenticationView,
       ),
     );
   }

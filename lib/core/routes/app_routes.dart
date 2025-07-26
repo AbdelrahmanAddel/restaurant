@@ -19,6 +19,8 @@ Route<dynamic>? generateRoutes(RouteSettings settings) {
     default:
       return MaterialPageRoute(
         builder: (context) => Scaffold(
+          appBar: AppBar(),
+
           body: Center(child: Text("The route ${settings.name} does't exits")),
         ),
       );
