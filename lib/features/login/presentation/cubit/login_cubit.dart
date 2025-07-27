@@ -7,7 +7,7 @@ class LoginCubit extends Cubit<LoginState> {
   LoginCubit(this.loginWithEmailAndPassUsecase) : super(LoginInitial());
 
   final LoginWithEmailAndPassUsecase loginWithEmailAndPassUsecase;
-  bool isPasswordVisible = false;
+  bool isPasswordVisible = true;
 
   void loginWithEmailAndPassword(
     LoginWithEmailAndPasswordModel loginModel,

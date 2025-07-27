@@ -25,4 +25,5 @@ Route<dynamic>? generateRoutes(RouteSettings settings) {
         ),
       );
   }
+  
 }

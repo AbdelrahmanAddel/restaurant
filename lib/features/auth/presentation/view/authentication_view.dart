@@ -10,3 +10,4 @@ class AuthenticationView extends StatelessWidget {
       body: SafeArea(child: AuthenticationViewBody()));
   }
 }
+ 
